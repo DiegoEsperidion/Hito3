@@ -1,0 +1,11 @@
+driver.find_element_by_id("fname").send_keys(nombre)
+driver.find_element_by_id("lname").send_keys(apellido)
+driver.find_element_by_id("postal").send_keys(codigo_postal)
+driver.find_element_by_id("email").send_keys(email)
+driver.find_element_by_id("reemail").send_keys(email)
+driver.find_element_by_id("password").send_keys(contraseña)
+
+driver.find_element_by_id("comunicaciones").click()
+driver.find_element_by_class_name("politicapriv").click()
+
+driver.find_element_by_class_name("btn-ap").click()
