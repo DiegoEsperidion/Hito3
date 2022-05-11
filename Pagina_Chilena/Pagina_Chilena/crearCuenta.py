@@ -1,22 +1,17 @@
 from selenium import webdriver
 import time
 
-nombre = "El Pollo"
-apellido = "Polluelo"
-email = "plynchp_v454k@chyju.com"
+telefono = "986734782"
+email = "himeji2482@eoscast.com"
 contraseña = "4gatos#!"
 
-url = "https://www.weplay.cl/customer/account/create/"
+url = "https://www.centralgamer.cl/customer/registration"
 driver= webdriver.Chrome("/home/diertech/Downloads/chromedriver")
 
 driver.get(url)
-
-driver.find_element_by_id("firstname").send_keys(nombre)
-driver.find_element_by_id("lastname").send_keys(apellido)
-driver.find_element_by_id("email_address").send_keys(email)
-driver.find_element_by_id("password").send_keys(contraseña)
-driver.find_element_by_id("password-confirmation").send_keys(contraseña)
-
-time.sleep(15)
-
-driver.find_element_by_xpath('//*[@id="form-validate"]/div[3]/div[1]/button').click()
+#ingreso los datos
+driver.find_element_by_name("customer[email]").send_keys(email)
+driver.find_element_by_name("customer[phone]").send_keys(telefono)
+driver.find_element_by_name("customer[password]").send_keys(contraseña)
+driver.find_element_by_name("customer[password_confirmation]").send_keys(contraseña)
+driver.find_element_by_id("register_customer").click()
